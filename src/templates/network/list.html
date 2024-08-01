@@ -1,0 +1,23 @@
+{% extends "home/base.html" %}
+{% block body %}
+<h1>Listado de Networks</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>icon</th>
+            <th>url</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for network in networks %}
+        <tr>
+            <td>{{ network.id }}</td>
+            <td>{{ network.icon }}</td>
+            <td>{{ network.url }}</td>
+        
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
